@@ -13,6 +13,7 @@ public class TodoRepositoryFixture
     {
         var configuration = new ConfigurationBuilder()
             .AddJsonFile("appsettings.json")
+            .AddEnvironmentVariables()
             .Build();
 
         _connectionString = configuration.GetConnectionString("TodoDb")
